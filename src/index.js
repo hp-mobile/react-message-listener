@@ -3,6 +3,10 @@ import { Component, createElement } from 'react';
 const on = (eventName, cb) => {
   const handler = ({ data }) => {
     if (data === eventName) return cb();
+    if (typeof data === 'object' && data.type === eventName) {
+      delete data.type;
+      return cb(data);
+    }
   };
   window.addEventListener('message', handler, false);
   return () => {

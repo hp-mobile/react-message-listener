@@ -1,12 +1,21 @@
 # react-message-listener
 
-A higher order component for composing post-message listeners.
+A higher order component for composing `postMessage` listeners.
 
-## installation
+## Installation
 
 `npm i @highpoint/react-message-listener`
 
-## usage
+## Usage
+
+`postMessage` events may pass either a string or an object. If an object is passed,
+it must have a `type` property set, and that is what is used to determine if the
+listener fires.
+
+For example, `postMessage` can send a simple string like `window.postMessage('toggle', '*')`
+or an object like `window.postMessage({ type: 'toggle', active: true }, '*')`.
+
+## Example
 
 ```js
 import { createElement } from 'react';
@@ -29,5 +38,5 @@ const el = enhance(({ isVisible }) => {
 render(createElement(el), document.getElementById('app'));
 ```
 
-Refer to [experiment]() for a full example of this component working.
+Refer to `experiment` for a full example of this component working.
 You can run it with `npm run experiment`.
