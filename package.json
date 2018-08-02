@@ -40,7 +40,8 @@
   "scripts": {
     "prebuild": "mkdirp dist",
     "build": "babel src/index.js --out-file dist/index.js",
-    "experiment": "budo experiment/index.js --dir experiment --serve bundle.js --live --open",
+    "experiment":
+      "budo experiment/index.js --dir experiment --serve bundle.js --live --open",
     "lint": "eslint {dev,src}/**/*.js",
     "precommit": "lint-staged",
     "prepublishOnly": "npm run build",
@@ -48,8 +49,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "browserify": {
-    "transform": [
-      "babelify"
-    ]
-  }
+    "transform": ["babelify"]
+  },
+  "files": ["dist/index.js"]
 }
