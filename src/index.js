@@ -25,8 +25,8 @@ const withMessageListener = (
         throw new Error('event is needed for withMessageListener HOC');
       if (handler === undefined)
         throw new Error('handler is needed for withMessageListener HOC');
-      this.dispose = on(event, () => {
-        handler(this.props);
+      this.dispose = on(event, (data = {}) => {
+        handler({ ...this.props, ...data });
         if (once) {
           this.dispose();
         }
@@ -38,12 +38,15 @@ const withMessageListener = (
         }, timeout);
       }
     }
+
     componentDidMount() {
       this.setup();
     }
+
     componentWillUnmount() {
       this.dispose();
     }
+
     render() {
       return createElement(ComposedComponent, this.props);
     }
