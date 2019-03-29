@@ -1,6 +1,6 @@
 {
   "name": "@highpoint/react-message-listener",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "React message-listener HOC",
   "homepage": "https://github.com/hp-mobile/react-message-listener#readme",
   "repository": {

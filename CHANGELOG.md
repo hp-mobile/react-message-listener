@@ -1,3 +1,7 @@
+# v0.2.2
+* Fix support for objects. Data was not getting passed to handler, but it is
+now.
+
 # v0.2.1
 * Clean up package (remove unnecessary files)
 
