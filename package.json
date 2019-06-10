@@ -2,13 +2,13 @@
   "name": "@highpoint/react-message-listener",
   "version": "0.2.2",
   "description": "React message-listener HOC",
-  "homepage": "https://github.com/hp-mobile/react-message-listener#readme",
+  "homepage": "https://github.com/highpoint-tech/react-message-listener#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hp-mobile/react-message-listener.git"
+    "url": "git+https://github.com/highpoint-tech/react-message-listener.git"
   },
   "bugs": {
-    "url": "https://github.com/hp-mobile/react-message-listener/issues"
+    "url": "https://github.com/highpoint-tech/react-message-listener/issues"
   },
   "author": {
     "name": "HighPoint",
